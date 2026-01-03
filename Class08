@@ -1,0 +1,52 @@
+namespace Aula08;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("-------- Operadores Relacionais -------");
+        Console.Write("\nDigite o 1º numero: ");
+        int n1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite o 2º numero: ");
+        int n2 = Convert.ToInt32(Console.ReadLine());
+
+        string result;
+
+        if(n1 == n2)//Igualdade
+        {
+            Console.WriteLine($"\n- {n1} é igual a {n2}");
+        }
+        else
+        {
+            Console.WriteLine($"\n- {n1} é diferente de {n2}");
+        }
+
+        if (n1 != n2)//Diferença
+        {
+            Console.WriteLine($"- {n1} é diferente de {n2}");
+        }
+        else
+        {
+            Console.WriteLine($"- {n1} é igual a {n2}");
+        }
+
+        if (n1 > n2)
+        {
+            Console.WriteLine($"- {n1} é estritamente MAIOR que {n2}");
+        }
+        else if (n1 < n2)
+        {
+            Console.WriteLine($"- {n1} é estritamente MENOR que {n2}");
+        }
+        else
+        {
+            Console.WriteLine($"- {n1} e {n2} são IGUAIS, por isso nenhum é maior.");
+        }
+
+        if (n1 >= n2)
+            Console.WriteLine($"- {n1} é maior ou igual a {n2}");
+
+        if (n1 <= n2)
+            Console.WriteLine($"- {n1} é menor ou igual a {n2}");
+    }
+}
