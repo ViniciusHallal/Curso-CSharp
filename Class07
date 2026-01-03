@@ -1,0 +1,37 @@
+namespace Aula07;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("------- Operadores de Atribuição -------");
+
+        int x = 10;
+        Console.WriteLine($"\nO valor inicial da variavel X é: {x}");
+
+        Console.WriteLine("\nAtribuição Simples (=)");
+        x = 20;
+        Console.WriteLine($"Novo valor de X: {x}");
+
+        Console.WriteLine("\nAtribuição Incremental (++)");
+        x++; //Incrementa +1 na variavel
+        Console.WriteLine($"Novo valor de X : {x}");
+
+        Console.WriteLine("\nAtribuição Incremental (+=)");
+        x+=10; //Incrementa +10 na variavel
+        Console.WriteLine($"Novo valor de X : {x}");
+
+        Console.WriteLine("\nAtribuição Decremental (-=)");
+        x-=20; //Decrementa +20 na variavel
+        Console.WriteLine($"Novo valor de X : {x}");
+
+        Console.WriteLine("\nAtribuição Multiplicacional (*=)");
+        x*=2; //Multiplica por 2 na variavel
+        Console.WriteLine($"Novo valor de X : {x}");
+
+        Console.WriteLine("\nAtribuição Divisional (/=)");
+        x/=4; //Divide por 4 na variavel
+        Console.WriteLine($"Novo valor de X : {x}");
+
+    }
+}
