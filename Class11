@@ -1,0 +1,89 @@
+namespace Aula11;
+
+public class Program
+{
+    public static void Main()
+    {
+        /*bool boolValue = true;
+
+        switch (boolValue)
+        {
+            case true:
+                Console.WriteLine("O valor é true");
+                break;
+
+            case false:
+                Console.WriteLine("O valor é false");
+                break;*/
+
+
+        // -------------------------------------------------------------------------------------------
+
+        /*Console.WriteLine("------- Dia da Semana -------");
+        Console.Write("Digite um número de 1 a 7: ");
+        int DayofWeek = Convert.ToInt32(Console.ReadLine());
+
+        switch (DayofWeek)
+        {
+            case 1:
+                Console.WriteLine("Segunda-Feira");
+                break;
+
+            case 2:
+                Console.WriteLine("TerçaFeira");
+                break;
+
+            case 3:
+                Console.WriteLine("Quarta-Feira");
+                break;
+
+            case 4:
+                Console.WriteLine("Quinta-Feira");
+                break;
+
+            case 5:
+                Console.WriteLine("Sexta-Feira");
+                break;
+
+            case 6:
+                Console.WriteLine("Sábado");
+                break;
+
+            case 7:
+                Console.WriteLine("Domingo");
+                break;
+
+            default:
+                Console.WriteLine("Opção Inválida!");
+                break;
+        }*/
+
+        // -------------------------------------------------------------------------------------------
+
+
+        Console.WriteLine("------- Desempenho Escolar -------");
+        Console.Write("\nDigite a sua nota: ");
+        int score = Convert.ToInt32(Console.ReadLine());
+
+        switch (score)
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                Console.WriteLine("\nAbaixo da Média");
+                break;
+
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                Console.WriteLine("\nAcima da Média");
+                break;
+
+        }
+    }
+}
