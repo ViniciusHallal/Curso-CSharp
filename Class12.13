@@ -1,0 +1,26 @@
+namespace Aula12.Aula13;
+
+public class Program
+{
+    public static void Main()
+    {
+
+        Console.WriteLine("------- While -------\n");
+        int i = 0;
+
+        while(i <= 5)
+        {
+            Console.WriteLine($"- {i}");
+            i++;
+        }
+
+        i = 0;
+
+        Console.WriteLine("\n----- Do. While -----\n");
+        do
+        {
+            Console.WriteLine($"- {i}");
+            i++;
+        } while (i <= 5);
+    }
+}
