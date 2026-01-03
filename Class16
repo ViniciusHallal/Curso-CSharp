@@ -1,0 +1,52 @@
+namespace Aula16;
+
+public class Program
+{
+    public static void Main()
+    {
+        string separator = "----------------------";
+
+        Console.WriteLine("------- Arrays -------");
+
+        //1. Declaration of Array with values
+        string[] fruits = { "maça", "pera", "uva" };
+
+        //2. Acess to values
+        Console.WriteLine(fruits[1]);
+        Console.WriteLine(separator);
+
+        foreach (string fruit in fruits)
+        {
+            Console.WriteLine(fruit);
+        }
+
+        //3. Count of values
+        Console.WriteLine(separator);
+        Console.WriteLine($"Quantidade de Índices: {fruits.Length}");
+
+        //4. Switch values
+        Console.WriteLine(separator);
+        Console.WriteLine($"Valor antes da alteração: {fruits[1]}");
+        fruits[1] = "abacaxi";
+        Console.WriteLine($"Valor depois da alteração: {fruits[1]}");
+
+        //5. Declaration of Array without values
+        Console.WriteLine(separator);
+        int[] numbers = new int[3];
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+
+            Console.Write($"Digite um valor para a posição {i}: ");
+            numbers[i] = Convert.ToInt32(Console.ReadLine());
+
+        }
+
+        Console.WriteLine("\nOs números digitados foram:\n");
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
