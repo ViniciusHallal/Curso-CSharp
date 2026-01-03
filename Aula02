@@ -1,0 +1,15 @@
+namespace Aula02;
+
+public class Program
+{
+    public static void Main()
+    {
+        string name = "Vinicius";
+        int age = 18;
+        double deposit = 1000.50;
+        char character = 'a';
+        bool boolean = true;
+
+        Console.WriteLine($"My name is {name} and i am {age} years old. Today i'm deposit {deposit} in the bank."); //interpolação
+    }
+}
