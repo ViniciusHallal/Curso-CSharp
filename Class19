@@ -1,0 +1,85 @@
+namespace Aula19;
+
+using System.IO;
+public class program
+{
+    public static void Main()
+    {
+        Console.WriteLine("------- Gerenciador de Lista de Compras -------");
+
+        string path = @"C:\Users\Vinic\Downloads\Curso C#\Aula19\";
+        string filename = "Lista de compras.txt";
+        string filepath = path + filename;
+
+        List<string> shoplist = new List<string>();
+
+        if (File.Exists(filepath))
+        {
+        shoplist.AddRange(File.ReadAllLines(filepath));
+        }
+
+        while (true)
+        {
+            Console.WriteLine("\n== Lista de Compras ===");
+            Console.WriteLine("1 - Adicionar Item");
+            Console.WriteLine("2 - Remover Item");
+            Console.WriteLine("3 - Exibir Lista");
+            Console.WriteLine("4 - Sair");
+            Console.Write("\nSelecione uma opção: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Console.Write("\nDigite o nome do item para adicionar: ");
+                    string insert = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(insert))
+                    {
+                        shoplist.Add(insert);
+                        Console.WriteLine($"\nItem {insert} adicionado com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nO item não pode ser vazio!");
+                    }
+                break;
+
+                case 2:
+                    Console.Write("\nDigite o nome do item para remover: ");
+                    string toremove = Console.ReadLine();
+                    if (shoplist.Remove(toremove))
+                    {
+                        Console.WriteLine($"\nItem {toremove} removido com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nItem {toremove} inexistente");
+                    }
+                break;
+
+                case 3:
+                    if (shoplist.Count > 0)
+                    {
+                        Console.WriteLine("\n--- Lista atual ---");
+                        for(int i = 0;  i < shoplist.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1} - {shoplist[i]}");
+                        }
+                    } else
+                    {
+                        Console.WriteLine("\nLista vázia");
+                    }
+                break;
+
+                case 4:
+                    File.WriteAllLines(filepath, shoplist);
+                    Console.WriteLine("Lista salva com sucesso! Saindo...");
+                    return;
+
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente");
+                break;
+            }
+        }
+    }
+}
