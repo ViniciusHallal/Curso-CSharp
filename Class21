@@ -1,0 +1,14 @@
+namespace Aula21;
+
+public class Cake //Class Cake
+{
+    //Atributos
+    public string Name;
+    public string Color;
+    public string Flavor;
+    public int Camadas;
+    public bool TemRecheio;
+    public DateTime DataFabricao;
+    public decimal Value;
+
+}
