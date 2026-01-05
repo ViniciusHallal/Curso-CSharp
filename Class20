@@ -1,0 +1,10 @@
+namespace Aula20;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("POO - Object-oriented programming");
+        Console.WriteLine("-------- Teorical Class --------");
+    }
+}
