@@ -1,0 +1,17 @@
+namespace Aula23;
+
+public class Program
+{
+    public static void Main()
+    {
+        //Criar instância bank
+        var bankPraiano = new Bank();
+        bankPraiano.Name = "Banco Praiano";
+        bankPraiano.Id = 77777;
+
+        //Chamando metodo da classe Bank
+        bankPraiano.Newcard();
+        Console.WriteLine($"O {bankPraiano.Name} - ID: {bankPraiano.Id}, agradece a sua paciência.");
+
+    }
+}
